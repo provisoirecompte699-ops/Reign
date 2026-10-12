@@ -25,3 +25,9 @@
   to = "/.netlify/functions/poll"
   status = 200
   force = true
+  [functions]
+   node_bundler = "esbuild"
+
+   [functions."scheduled-poll"]
+   schedule = *0 */6 * * *"
+  
