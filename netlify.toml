@@ -1,0 +1,27 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/status"
+  to = "/.netlify/functions/status"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/products/*"
+  to = "/.netlify/functions/products?asin=:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/products"
+  to = "/.netlify/functions/products"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/poll"
+  to = "/.netlify/functions/poll"
+  status = 200
+  force = true
